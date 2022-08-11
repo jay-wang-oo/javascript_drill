@@ -3,7 +3,6 @@ const btnAdd = document.querySelector('.btn_add');
 const txt = document.querySelector('.txt');
 const list = document.querySelector('.list');
 
-
 // 渲染
 function render(listData){
   let str = '';
