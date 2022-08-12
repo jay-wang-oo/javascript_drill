@@ -6,52 +6,7 @@ const search = document.querySelector(".search-group");
 
 let data = [];
 
-//撈取資料
-function getData () {
-  axios.get(url)
-    .then ((res) => {
-      data = res.data
-      // console.log(data)
-      // renderData(data)
-    })
-}
-getData()
-
-function renderData (showData) {
-  let str = ''
-  showData.forEach(item => {
-    str += `
-        <tr>
-          <td>${item.作物名稱}</td>
-          <td>${item.上價}</td>
-          <td>${item.中價}</td>
-          <td>${item.下價}</td>
-          <td>${item.平均價}</td>
-          <td>${item.交易量}</td>
-        </tr>
-    `
-  })
-  productsList.innerHTML = str
-}
-
-search.addEventListener('click', (e) => {
-  if (e.target.nodeName == 'BUTTON') {
-    const input = document.querySelector('input')
-    if (input.value.trim() == '') {
-      alert('請輸入作物名稱！')
-      return
-    }
-    let filterData = []
-    filterData = data.filter(item => {
-      return item.作物名稱.match(input.value)
-    })
-    if (filterData.length == 0) {
-      productsList.innerHTML = `<tr><td colspan="6" class="text-center p-3">查詢不到交易資訊QQ</td></tr>`
-    } else {
-      renderData(filterData)
-    }
-  }
-})
+// ==================================================
 
 //撈取資料
 // function getData(){
@@ -59,6 +14,7 @@ search.addEventListener('click', (e) => {
 //     .then ((res) => {
 //       data = res.data
 //       console.log(data)
+//       renderData(data)
 //     })
 // }
 // getData();
@@ -80,6 +36,8 @@ search.addEventListener('click', (e) => {
 //   })
 //   productsList.innerHTML = str;
 // }
+
+
 
 // search.addEventListener('click', (e) => {
 //   // 透過 if 判斷點擊到的等於以下按鈕，<button type="button" class="search text-white btn mb-2">搜尋</button>
