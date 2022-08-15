@@ -6,6 +6,8 @@ const search = document.querySelector(".search-group");
 
 let data = [];
 
+
+
 // ==================================================
 
 //撈取資料
@@ -36,6 +38,7 @@ let data = [];
 //   })
 //   productsList.innerHTML = str;
 // }
+
 
 
 

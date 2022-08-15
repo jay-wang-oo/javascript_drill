@@ -33,8 +33,17 @@ people.forEach((item, i) => {
 
 // 2. 小明看到今天有打八折！！，請將所有訂單新增一個新價格，金額是 80%
 // 2.1 forEach
+// let newOrders = []
+// people.forEach((item, i) => {
+//   newOrders[i] = {
+//     ...item,
+//     newPrice: item.price * 0.8
+//   }
+// })
+
+
 // 2.2 map
-// const newOrders = people.map(function(item, index) {
+// const newOrders2 = people.map(function(item, index) {
 //   return {
 //     ...item,
 //     newPrice: item.price * 0.8
@@ -52,26 +61,25 @@ people.forEach((item, i) => {
 // console.log(newOrders);
 
 // ================= 2.結果 =================
-console.log(newOrders)
+// console.log(newOrders)
+// console.log(newOrders2)
 // ================= 2.結果 =================
 
 
 // 3. 老闆說，今天疫情沒有八折啦，不過 80 元的可以給滷蛋
 // 3.1 forEach
-// const newOrders2 = [];
+// const newOrders3 = [];
 // people.forEach(function(item, index) {
 //   if (item.price >= 80) {
-//     newOrders2.push(item)
+//     newOrders3.push(item)
 //   }
 // });
 
 
 // 3.2 filter
-// const newOrders22 = people.filter(function(item, index) {
+// const newOrders4 = people.filter(function(item, index) {
 //   return item.price >= 80; // 為真的，就會回傳該物件
 // });
-
-
 
 
 
@@ -80,13 +88,15 @@ console.log(newOrders)
 // console.log(newOrders2);
 
 // ================= 3.結果 =================
-console.log(newOrders2);
-console.log(newOrders22);
+// console.log(newOrders3);
+// console.log(newOrders4);
 // ================= 3.結果 =================
 
 
 // 4. 過一段時間後，老闆發現牛肉沒了，把點牛肉麵的換成牛肉湯麵
+
 // 4.1 forEach
+
 // let index = 0
 // people.forEach(function(obj, key) {
 //   if (obj.order === '牛肉麵') {
@@ -102,15 +112,10 @@ console.log(newOrders22);
 // })
 
 // 4.2 findIndex
-// const index = people.findIndex(function(item) {
-//   return item.order === '牛肉麵'
-// })
-
 // const index = people.findIndex((item, i) => {
 //   return item.order === '牛肉麵'
 // })
 // people[index].order = '牛肉湯麵2'
-
 
 // 4.3 findIndex + arrow
 // const index = people.findIndex(item => item.order === '牛肉麵')
@@ -122,7 +127,7 @@ console.log(newOrders22);
 // ================= 4.結果 =================
 // people[index].order = '牛肉湯麵'
 // console.log(people[index]);
-console.log(people)
+// console.log(people)
 // ================= 4.結果 =================
 
 
@@ -135,13 +140,6 @@ console.log(people)
 //     </li>`;
 // });
 
-// let str = ''
-// people.forEach((item) => {
-//   str += `
-//   <li>${item.order} ${item.price}</li>
-//   `
-// })
-
 // 5.2
 // const htmlTemplate = people.map(function(obj, key) {
 //   return `<li>
@@ -150,21 +148,16 @@ console.log(people)
 // }).join('');
 // console.log(htmlTemplate);
 
-// const str2 = people.map((item) => {
-//   return `
-//   <li>${item.order} ${item.price}</li>
-//   `
-// }).join('');
-
 // 5.3
 // const htmlTemplate = people.map((obj, key) =>  `<li>
 //   ${obj.order}, ${obj.price}
 // </li>`).join('');
 // console.log(htmlTemplate);
 
+
 // ================= 5.結果 =================
-console.log(str);
-console.log(str2);
+// console.log(str);
+// console.log(str2);
 // ================= 5.結果 =================
 
 // 6. 老闆要收錢了，請問老闆應該收多少錢
@@ -177,7 +170,6 @@ console.log(str2);
 
 
 
-
 // 6.2
 // const total = people.reduce(function(acc, cur) { //reduce(acc,cur)
 //   console.log(acc);
@@ -186,18 +178,14 @@ console.log(str2);
 
 
 
-
-
 // 6.3
 // const total = people.reduce((acc, cur) => acc + cur.price, 0);
 // console.log(total);
 
 
-// console.log(total);
-
 // ================= 6.結果 =================
-console.log(total);
-console.log(total2);
+// console.log(total);
+// console.log(total2);
 // ================= 6.結果 =================
 
 
@@ -209,9 +197,6 @@ console.log(total2);
 
 
 
-
-
-
 // ================= 7.結果 =================
-console.log(peopleSort);
+// console.log(peopleSort);
 // ================= 7.結果 =================

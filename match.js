@@ -1,10 +1,12 @@
 // 練習 1
 var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
-const regexp = /[A-E]/gi;
-const matches_array = str.match(regexp)
+// const regexp = /[A-E]/gi;
+// const matches_array = str.match(regexp)
 
-console.log(matches_array)
+// console.log(matches_array)
+
+
 
 // =====================================================
 
@@ -25,21 +27,21 @@ let data = [
 const list = document.querySelector('ul')
 const button = document.querySelector('button')
 
-function renderData(showData) {
-  let str = ''
-  showData.forEach((item) => {
-    str += `<li>${item.作物名稱}</li>`
-  })
-  list.innerHTML = str
-}
-renderData(data)
+// function renderData(showData) {
+//   let str = ''
+//   showData.forEach((item) => {
+//     str += `<li>${item.作物名稱}</li>`
+//   })
+//   list.innerHTML = str
+// }
+// renderData(data)
 
-button.addEventListener('click', (e) => {
-  const input = document.querySelector('input')
-  let filterData = []
-  filterData = data.filter(item => {
-    return item.作物名稱.match(input.value)
-  })
-  console.log(filterData)
-  renderData(filterData)
-})
+// button.addEventListener('click', (e) => {
+//   const input = document.querySelector('input')
+//   let filterData = []
+//   filterData = data.filter(item => {
+//     return item.作物名稱.match(input.value)
+//   })
+//   console.log(filterData)
+//   renderData(filterData)
+// })

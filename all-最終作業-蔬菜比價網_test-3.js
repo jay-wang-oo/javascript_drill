@@ -1,4 +1,3 @@
-// const { default: axios } = require("axios");
 
 // JSON 檔案網址
 const url = "https://shannon945.github.io/farm_produce/data.json";
@@ -6,7 +5,6 @@ const productsList = document.querySelector(".showList");
 const select = document.querySelector('.sort-select');
 
 let data = [];
-
 
 
 
@@ -38,8 +36,6 @@ let data = [];
 //   })
 //   productsList.innerHTML = str
 // }
-
-
 
 
 

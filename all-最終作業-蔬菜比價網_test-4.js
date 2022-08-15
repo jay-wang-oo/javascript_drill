@@ -1,6 +1,3 @@
-// const { default: axios } = require("axios");
-
-// const { default: axios } = require("axios");
 
 // JSON 檔案網址
 const url = "https://shannon945.github.io/farm_produce/data.json";
@@ -37,6 +34,7 @@ let data = [];
 //   });
 //   productsList.innerHTML = str;
 // }
+
 
 
 

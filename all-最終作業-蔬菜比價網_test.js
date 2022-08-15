@@ -1,10 +1,10 @@
-// const { default: axios } = require("axios");
 
 // JSON 檔案網址
 const url = "https://shannon945.github.io/farm_produce/data.json";
 const productsList = document.querySelector(".showList");
 const buttonGroup = document.querySelector(".button-group");
 let data = [];
+
 
 // ==================================================
 
@@ -36,17 +36,6 @@ let data = [];
 //   })
 //   productsList.innerHTML = str;
 // }
-
-// //函式：篩選出 data 內的種類代碼為 "N04, N05, N06"
-// function changeType (type) {
-//   let filterData = [];
-//   filterData = data.filter((item) => {
-//     return item.種類代碼 == type
-//   })
-//   console.log(filterData)
-//   renderData(filterData) //呼叫 renderData 並傳入參數 filterData
-// }
-
 
 // buttonGroup.addEventListener("click", (e) => {
 //   console.log(e.target.dataset.type)
